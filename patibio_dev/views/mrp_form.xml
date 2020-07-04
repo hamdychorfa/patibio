@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="mrp_inherit_form_view" model="ir.ui.view">
+            <field name="name">MRP Inherit</field>
+            <field name="model">mrp.bom</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[1]" position="before">
+                    <page string="Infos générales">
+
+                        <group>
+                            <group>
+                                <field name="location_manufacturing"/>
+                                <field name="tags"/>
+                                <field name="can_be_frozen"/>
+                                <field name="lot_manufacturing"/>
+                                <field name="dlv"/>
+                                <field name="dlc"/>
+                                <field name="dluo"/>
+                                <field name="selled_by"/>
+                                <field name="weight_product"/>
+                                <field name="informations_conserve"/>
+                            </group>
+
+                        </group>
+
+                    </page>
+                </xpath>
+                <xpath expr="//page[2]" position="attributes">
+                    <attribute name="string">Nomenclature</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
+
+
+
+
